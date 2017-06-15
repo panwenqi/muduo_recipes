@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+EventLoop	EventLoop.cpp	/^EventLoop::EventLoop() : looping_(false), threadId_(CurrentThread::tid())$/;"	f	class:EventLoop
+EventLoop	EventLoop.h	/^	class EventLoop : boost::noncopyable$/;"	c	namespace:muduo
+MUDUO_NET_EVENTLOOP_H	EventLoop.h	2;"	d
+abortNotInLoopThread	EventLoop.cpp	/^void EventLoop::abortNotInLoopThread()$/;"	f	class:EventLoop
+assertInLoopThread	EventLoop.h	/^		void assertInLoopThread()$/;"	f	class:muduo::EventLoop
+isInLoopThread	EventLoop.h	/^		bool isInLoopThread() const$/;"	f	class:muduo::EventLoop
+loop	EventLoop.cpp	/^void EventLoop::loop()$/;"	f	class:EventLoop
+looping_	EventLoop.h	/^		bool looping_;$/;"	m	class:muduo::EventLoop
+main	test.cpp	/^int main()$/;"	f
+muduo	EventLoop.h	/^namespace muduo$/;"	n
+threadFunc	test.cpp	/^void threadFunc()$/;"	f
+threadId_	EventLoop.h	/^		const pid_t threadId_;$/;"	m	class:muduo::EventLoop
+~EventLoop	EventLoop.cpp	/^EventLoop::~EventLoop()$/;"	f	class:EventLoop

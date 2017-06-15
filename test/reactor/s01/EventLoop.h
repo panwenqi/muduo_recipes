@@ -1,0 +1,39 @@
+#ifndef MUDUO_NET_EVENTLOOP_H
+#define MUDUO_NET_EVENTLOOP_H
+#include "thread/Thread.h"
+
+namespace muduo
+{
+	class Channel;
+	class Poller;
+
+	class EventLoop : boost::noncopyable
+	{
+	public:
+		EventLoop();
+		~EventLoop();
+
+		void loop();
+		void quit();
+		
+		void assertInLoopThread()
+		{
+			if(!isInLoopThread())
+			{
+				abortNotInLoopThread();
+			}
+		}
+
+		bool isInLoopThread() const
+		{
+			return threadId_ == CurrentThread::tid();
+		}
+	private:
+		void abortNotInLoopThread();
+		bool looping_;
+		const pid_t threadId_;
+	};
+}
+
+
+#endif
